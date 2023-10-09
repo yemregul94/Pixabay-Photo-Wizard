@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "307245581",
+    "firebase_url": "https://pixabay-tsoft-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pixabay-tsoft",
+    "storage_bucket": "pixabay-tsoft.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307245581:android:634d2c175227db416b1b44",
+        "android_client_info": {
+          "package_name": "com.moonlight.tsoft_pixabay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeiMPRrJJe5jPOu7uHzdu66SuGJ7peYWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

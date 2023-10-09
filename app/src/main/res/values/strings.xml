@@ -1,0 +1,63 @@
+<!DOCTYPE resources [<!ENTITY appname "Pixabay Photo Wizard">]>
+
+<resources>
+    <string name="app_name">Pixabay Photo Wizard</string>
+
+    //Onboard
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="done">Done</string>
+    <string name="search">Search</string>
+
+    <string name="re_open_onboard">Reopen Onboard</string>
+    <string name="onboard_first_title">Welcome</string>
+    <string name="onboard_second_title">Basics</string>
+
+    <string name="onboard_first_desc">Welcome to the &appname;
+        \nThis is a placeholder page for a simple tutorial or welcome page.</string>
+    <string name="onboard_second_desc">Here you learn about some basics like you can hold to list items or swipe them to add or remove favorites.</string>
+
+    //Welcome
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_first_login">Welcome To &appname;</string>
+    <string name="welcome_re_login">Welcome back %s</string>
+
+    //Auth Common
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="empty_mail_password">Email and Password can\'t be empty</string>
+    <string name="empty_email">Email can\'t be empty</string>
+    <string name="input_valid_email">Input a <b>Valid</b> Email Address</string>
+    <string name="input_valid_password">Password must be at least 6 characters</string>
+
+    //Login
+    <string name="login">Login</string>
+    <string name="have_no_account">No account? <b>Register</b></string>
+    <string name="remember_me">Remember Me</string>
+
+    //Register
+    <string name="already_have_account">Already have account? <b>Login</b></string>
+    <string name="register">Register</string>
+
+    //Reset
+    <string name="reset_password">Reset Password</string>
+    <string name="reset">Reset</string>
+    <string name="password_reset_success">Password reset successful \nCheck your email inbox</string>
+
+    //Details
+    <string name="details_id">ID</string>
+    <string name="details_tag">Tags</string>
+    <string name="details_views">Views</string>
+    <string name="details_downloads">Downloads</string>
+    <string name="details_user">Uploader</string>
+    <string name="details_link">Page Link</string>
+
+    //Menus
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorites">Favorites</string>
+    <string name="logout">Logout</string>
+
+
+</resources>

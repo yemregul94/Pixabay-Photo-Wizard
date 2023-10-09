@@ -1,0 +1,62 @@
+<!DOCTYPE resources [<!ENTITY appname "Pixabay Foto Sihirbazı">]>
+
+<resources>
+    <string name="app_name">Pixabay Foto Sihirbazı</string>
+
+    //Onboard
+    <string name="next">Sonraki</string>
+    <string name="skip">Atla</string>
+    <string name="done">Bitir</string>
+    <string name="search">Ara</string>
+
+    <string name="re_open_onboard">Rehberi Tekrar Aç</string>
+    <string name="onboard_first_title">Hoş Geldiniz</string>
+    <string name="onboard_second_title">Temel Özellikler</string>
+
+    <string name="onboard_first_desc">&appname;\'na Hoş Geldiniz
+        \nBu kısım basit bir rehber veya karşılama ekranı için bir yer tutucu görevi görüyor.</string>
+    <string name="onboard_second_desc">Burada favorilere eklemek veya kaldırmak için basılı tutma veya yana kaydırma yapabilmek gibi uygulamanın temel özelliklerini öğrenebilirsiniz.</string>
+
+    //Welcome
+    <string name="welcome_title">Hoş Geldiniz</string>
+    <string name="welcome_first_login">&appname;\'e Hoş Geldiniz</string>
+    <string name="welcome_re_login">Tekrar Hoş Geldin %s</string>
+
+    //Auth Common
+    <string name="email">Email</string>
+    <string name="password">Şifre</string>
+    <string name="forgot_password">Şifremi Unuttum</string>
+    <string name="empty_mail_password">Email ve Şifre boş olamaz</string>
+    <string name="empty_email">Email boş olamaz</string>
+    <string name="input_valid_email"><b>Geçerli</b> Bir Email Adresi Giriniz</string>
+    <string name="input_valid_password">Şifre en az 6 karakter olmalı</string>
+
+    //Login
+    <string name="login">Giriş Yap</string>
+    <string name="have_no_account">Hesabın yok mu? <b>Kayıt Ol</b></string>
+    <string name="remember_me">Beni Hatırla</string>
+
+    //Register
+    <string name="already_have_account">Zaten kayıtlı mısın? <b>Giriş Yap</b></string>
+    <string name="register">Kayıt Ol</string>
+
+    //Reset
+    <string name="reset_password">Şifreyi Sıfırla</string>
+    <string name="reset">Sıfırla</string>
+    <string name="password_reset_success">Şifre Sıfırlama Başarılı \nEmail gelen kutunuzu kontrol edin</string>
+
+    //Details
+    <string name="details_id">ID</string>
+    <string name="details_tag">Etiketler</string>
+    <string name="details_views">Görüntülenme</string>
+    <string name="details_downloads">İndirme</string>
+    <string name="details_user">Yükleyen</string>
+    <string name="details_link">Sayfa Linki</string>
+
+    //Menus
+    <string name="home">Giriş</string>
+    <string name="favorite">Favori</string>
+    <string name="favorites">Favoriler</string>
+    <string name="logout">Çıkış</string>
+
+</resources>

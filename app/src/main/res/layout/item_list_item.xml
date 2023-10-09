@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="pictures"
+            type="com.moonlight.tsoft_pixabay.data.model.Pictures" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_corner_8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:maxWidth="128dp"
+            android:maxHeight="256dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/tv_details_id_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{@string/details_id(pictures.id)}"
+            android:textColor="@color/theme_primary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            tools:text="ID" />
+
+        <TextView
+            android:id="@+id/tv_details_ids"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{Integer.toString(pictures.id)}"
+            android:textColor="@color/main_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_details_id_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_details_id_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_details_id_title"
+            tools:text="ID Number" />
+
+        <TextView
+            android:id="@+id/tv_details_tag_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@{@string/details_tag}"
+            android:textColor="@color/theme_primary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/tv_details_id_title"
+            tools:text="Tag" />
+
+        <TextView
+            android:id="@+id/tv_details_tags"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{pictures.tags}"
+            android:textColor="@color/main_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_details_tag_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_details_tag_title"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Tags" />
+
+        <CheckBox
+            android:id="@+id/check_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:button="@drawable/selector_favorite"
+            android:buttonTint="@color/red"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_details_id_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
