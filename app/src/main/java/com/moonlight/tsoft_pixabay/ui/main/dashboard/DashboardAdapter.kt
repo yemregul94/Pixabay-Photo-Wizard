@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +14,7 @@ import com.moonlight.tsoft_pixabay.R
 import com.moonlight.tsoft_pixabay.data.model.Pictures
 import com.moonlight.tsoft_pixabay.databinding.ItemListItemBinding
 
-class DashboardAdapter : RecyclerView.Adapter<DashboardAdapter.ViewHolder>() {
+class DashboardAdapter : PagingDataAdapter<Pictures, DashboardAdapter.ViewHolder>(differCallBack) {
 
     var onFavClick: ((Int, Boolean) -> Unit)? = null
     var favList = emptyList<Int>()
@@ -25,30 +26,26 @@ class DashboardAdapter : RecyclerView.Adapter<DashboardAdapter.ViewHolder>() {
         }
     }
 
-    private val differCallBack = object : DiffUtil.ItemCallback<Pictures>() {
-        override fun areItemsTheSame(oldItem: Pictures, newItem: Pictures): Boolean {
-            return oldItem.id == newItem.id
-        }
+    companion object {
+        private val differCallBack = object : DiffUtil.ItemCallback<Pictures>() {
+            override fun areItemsTheSame(oldItem: Pictures, newItem: Pictures): Boolean {
+                return oldItem.id == newItem.id
+            }
 
-        override fun areContentsTheSame(oldItem: Pictures, newItem: Pictures): Boolean {
-            return oldItem == newItem
+            override fun areContentsTheSame(oldItem: Pictures, newItem: Pictures): Boolean {
+                return oldItem == newItem
+            }
         }
     }
-
-    val differ = AsyncListDiffer(this, differCallBack)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemListItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_list_item, parent, false)
         return ViewHolder(binding)
     }
 
-    override fun getItemCount(): Int {
-        return differ.currentList.size
-    }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.setIsRecyclable(false)
-        val listItem = differ.currentList[position]
+        val listItem = getItem(position)!!
         val bind = holder.binding
         bind.pictures = listItem
 
